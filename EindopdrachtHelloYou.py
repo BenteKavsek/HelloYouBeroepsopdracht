@@ -6,7 +6,7 @@ def function1():
 
 
 def function2():
-    print("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, (Let op! het is hoofdletter gevoelig!) \n Have Fun!")
+    print("\nLeuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b,\n(Let op! het is hoofdletter gevoelig!)\n")
 
 
 def function3():
@@ -14,71 +14,75 @@ def function3():
 
 
 def function4():
-    print("het werkt tot nu toe")
+    print("...")
 
 
 def function5():
-    print("faillll")
+    print("...")
+
+
+def function6():
+    print("...")
 
 
 def function7():
-    antwoord7 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function8():
-    antwoord8 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function9():
-    antwoord9 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function10():
-    antwoord10 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function11():
-    antwoord11 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function12():
-    antwoord12 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function13():
-    antwoord13 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function14():
-    antwoord14 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function15():
-    antwoord15 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function16():
-    antwoord16 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function17():
-    antwoord17 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function18():
-    antwoord18 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function19():
-    antwoord19 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function20():
-    antwoord20 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 
 def function21():
-    antwoord21 = input("Leuk dat je wilt beginnen , om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, \n Have Fun!")
+    print("...")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -87,23 +91,13 @@ antwoord1 = input("kleine stukjes uit het verhaal heb ik gebaseerd op mijzelf, W
 
 if antwoord1 == "A":
     function2()
-    antwoord2 = input("Om te Beginnen typ: START")
+    print("Succes!")
 
-elif antwoord1 == "B":
+elif antwoord1 == "A":
     function3()
+    antwoord3 = input("vraag voor antwoord")
 
-
-if antwoord2 == "START":
-    function4()
-
-while antwoord2 != "START":
-    print("\n Probeer nog een keer, \n")
-    function2()
-    antwoord2 = input("Om te Beginnen typ: START")
-    if antwoord2 == "START":
-        function4()
-
-
+#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #if antwoord... == "...":
 #    function...()
