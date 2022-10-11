@@ -1,7 +1,8 @@
+import random
 #functions met stukjes verhaaltjes
 
 def function1():
-    print("Welkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.")
+    print("\n\nWelkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.")
     print("Hierin ben jij de hoofdpersoon, en kan je zelf keuzes maken om te zien hoe het verhaal verder gaat en uiteindelijk afloopt.")
 
 
@@ -14,23 +15,24 @@ def function3():
 
 
 def function4():
-    print("...")
+    print("Je zit in het examenjaar van je opleiding op met MA, maar jullie klas heeft nog 1 belangrijke toets gemist van het begin van het jaar,")
+    print("opzich sta je er prima voor, dus de kans is groot dat je het haalt, wat doe je?")
 
 
 def function5():
-    print("...")
-
+    print("Okee lekker zelfverzekerd, nu hopen dat het goedkomt!")
 
 def function6():
-    print("...")
+    print("")#nog ff leren
 
 
 def function7():
-    print("...")
+    print("Jammer, de toets weegt zwaarder mee dan je dacht, je bent niet geslaagd en moet het jaar over doen, je kan dus niet komend jaar naar het buitenland. Volgende keer beter!")
 
 
 def function8():
-    print("...")
+    print("Luckyyy! Je stond er al goed voor, het was dus niet zo erg dat je niet alles wist. je bent geslaagd en krijgt een uitnodiging binnen voor je diploma uitreiking,")
+    print("eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten, je verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend!")
 
 
 def function9():
@@ -87,16 +89,28 @@ def function21():
 #-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function1()
-antwoord1 = input("kleine stukjes uit het verhaal heb ik gebaseerd op mijzelf, Wil je beginnen?\n A, ja! \n B, nee\n")
+antwoord1 = input("kleine stukjes uit het verhaal heb ik gebaseerd op mijzelf, Wil je beginnen?\nA, ja! \nB, nee\n")
 
 if antwoord1 == "A":
     function2()
     print("Succes!")
+    function4()
+    antwoord4 = input("\nA, het komt wel goed, dus je gaat vast vakantie vieren en maakt de toets zonder te leren\nB, het zijn de laatste lootjes, toch nog even knallen voor de zekerheid!")
 
-elif antwoord1 == "A":
+elif antwoord1 == "B":
     function3()
-    antwoord3 = input("vraag voor antwoord")
 
+if antwoord4 == "Ä":
+    function5()
+
+elif antwoord4 == "B":
+    function6()
+
+a = (random.randint(1, 100))
+if a >50:
+    function7()
+elif a <=50:
+    function8()
 #-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #if antwoord... == "...":
