@@ -5,7 +5,7 @@ import keyboard
 #functions met stukjes verhaaltjes
 
 def function1():
-    print("\n\nWelkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.")
+    print("\n\nWelkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.") 
     print("Hierin ben jij de hoofdpersoon, en kan je zelf keuzes maken om te zien hoe het verhaal verder gaat en uiteindelijk afloopt.")
 
 
@@ -64,10 +64,8 @@ def function12():
 
 
 def function13():
-    print("Gelukkig kunnen je ouders kunnen je wegbrengen richting de grens maar vanaf daar moet je het toch echt zelf gaan doen. ")
-    print("Je hebt een koffertje en rugzak mee, je wacht op een tankstation op mensen die je aardig lijken, en je stapt je in, zo ga je de komende dagen reizen en kom je van alles te weten en leer je nieuwe dingen.")
-    print("Zo kwam je een astronoom tegen, en wist je bijvoorbeeld dat de zonsopgang op mars niet roze of oranje is, maar blauw? ")
-    print("Zo kom je nog veel meer leuke mensen tegen, na een tijdje ben je bij een leuk eettentje wat gaan eten en opzoek gegaan naar een nieuw iemand om mee te rijden. plots zie je iemand die je lijkt te herkennen maar kan niet plaatsen wie het is, wat doe je? ")
+  print("Gelukkig kunnen je ouders kunnen je wegbrengen richting de grens maar vanaf daar moet je het toch echt zelf gaan doen.")
+  print("Zo kom je nog veel meer leuke mensen tegen, na een tijdje ben je bij een leuk eettentje wat gaan eten en opzoek gegaan naar een nieuw iemand om mee te rijden. plots zie je iemand die je lijkt te herkennen maar kan niet plaatsen wie het is, wat doe je? ")
 
 
 def function14():
@@ -86,7 +84,7 @@ def function17():
 
 
 def function172():
-    print("Jullie hebben het heel gezellig, nieuwe mensen leren kennen en nieuwe dingen proberen houd je van! ")
+    print("Jullie hebben het heel gezellig, nieuwe mensen leren kennen en nieuwe dingen proberen houd je van!")
     print("Na 2,5 week het leuk gehad met al deze mensen overweeg je om weer verder te liften, ga je dat ook doen? Er is vanavond een feetje op het stand,  wil je nog 1 weekend blijven?")
 
 
@@ -102,8 +100,8 @@ def function19():
 
 
 def function20():
-    print("Hij draait zich om en heeft een grijns op zn gezicht, opeens is iedereen om je heen weg, hij loopt langzaam in jou richting, je staat stil van schrik.")
-    print("Hij begint steeds sneller begint te lopen en je begint te rennen, ga je het bos in of ren je door de straat op zoek naar andere mensen om je te helpen? ")
+   print("Hij draait zich om en heeft een grijns op zn gezicht, opeens is iedereen om je heen weg, hij loopt langzaam in jou richting, je staat stil van schrik.")
+   print("Hij begint steeds sneller begint te lopen en je begint te rennen, ga je het bos in of ren je door de straat op zoek naar andere mensen om je te helpen? ")
 
 
 def function21():
@@ -127,15 +125,15 @@ def function24():
 
 
 def function25():
-    print("...")
-
+    print("Je stapt in bij de man die naar je zwaait, hij ziet er een beetje raar uit, maar ja je denkt er niet te veel van.")
+    print("Later merk je aan hem dat hij gedronken heeft, je komt bijna bij een plek om te slapen, nog een kwartiertje, blijf je zitten of stap je uit?(")
 
 def function26():
-    print("...")
+    print("Helaas, hij heeft veel dronken en bij een bocht raakt de auto van de weg en vliegen jullie het dal in, je overleeft het niet.")
 
 
 def function27():
-    print("...")
+    print ("Heel slim van je! Later hoor je dat de man verongelukt is, je hebt goede keuzes gemaakt! Well done! 😊 ")
 
 
 def function28():
@@ -143,14 +141,14 @@ def function28():
 
 
 def function29():
-    print("Je neemt de show op het strand afscheid van je groep en vliegt met de band mee naar Nederland waar de volgende show is, het publiek gaat los en je geniet er enorm vann")
-    print("opeens valt je oog op je vrienden van het MA en besluit je dat het goed zo is, je maakt de show af en bedankt de band, het is goed zo.")
-    print("Wat heb je ongelofelijk genoten afgelopen maanden, maar je bent weer thuis.")
+  print("Je neemt de show op het strand afscheid van je groep en vliegt met de band mee naar Nederland waar de volgende show is, het publiek gaat los en je geniet er enorm vann")
+  print("opeens valt je oog op je vrienden van het MA en besluit je dat het goed zo is, je maakt de show af en bedankt de band, het is goed zo.")
+  print("Wat heb je ongelofelijk genoten afgelopen maanden, maar je bent weer thuis.")
 
 
 def function30():
-    print("Goede keuze! Jij bent de gene die vanavond iedereen veilig mee neemt naar een plek om te slapen vannacht, je hebt het heel erg naar je zin gehad vannacht en besluit bij deze groep te blijven.")
-    print("Wie weet wat het je allemaal nog gaat brengen.")
+  print("Goede keuze! Jij bent de gene die vanavond iedereen veilig mee neemt naar een plek om te slapen vannacht, je hebt het heel erg naar je zin gehad vannacht en besluit bij deze groep te blijven.")
+  print("Wie weet wat het je allemaal nog gaat brengen.")
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------
 
