@@ -1,3 +1,5 @@
+verhaalList = 1
+
 def function1():
     print (verhaalList[1] + "\n" + verhaalList[2])
 
