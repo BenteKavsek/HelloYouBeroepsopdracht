@@ -1,7 +1,13 @@
 import time
 import random
+import sys
+from colorama import Fore, init
+init()
 
-verhaalLijst = ["NUL", "Welkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.",
+#pip install colorama
+
+verhaalLijst = ["NUL",
+                "Welkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven."+ Fore.RESET,
                 "Hierin ben jij de hoofdpersoon, en kan je zelf keuzes maken om te zien hoe het verhaal verder gaat en uiteindelijk afloopt. wil je beginnen?",
                 "Leuk dat je wilt beginnen, om keuzes te maken typ je alleen de letter die ervoor staat, dus bijvoorbeeld a of b, (Let op! het is hoofdletter gevoelig!)",
                 "Jammer, tot n andere keer!",
@@ -12,7 +18,7 @@ verhaalLijst = ["NUL", "Welkom bij mijn eindopdracht van periode 1 Hello You, ik
                 "Luckyyy! Je stond er al goed voor, het was dus niet zo erg dat je niet alles wist. je bent geslaagd en krijgt een uitnodiging binnen voor je diploma uitreiking,",
                 "eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten, je verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend! Ga je met het vliegtuig of rijden?",
                 "Slim! Je slaagt en hebt je vakantie dubbel verdient!",
-                "Je krijgt een uitnodiging binnen voor je diploma uitreiking, eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten,\nje verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend!"
+                "Je krijgt een uitnodiging binnen voor je diploma uitreiking, eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten,\nje verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend!",
                 "Prima! Je vliegt overmorgen om 6:15 naar Palermo in Sicilië",
                 "hier ben je al een keer met je schoonfamilie geweest en het was ongelofelijk mooi, je gaat vanavond afscheid nemen",
                 "ze willen wel graag op bezoek komen en helpen je alvast met inpakken, zo kan je rustig je vakantie in gaan.",
@@ -55,12 +61,11 @@ verhaalLijst = ["NUL", "Welkom bij mijn eindopdracht van periode 1 Hello You, ik
                 "Wat heb je ongelofelijk genoten afgelopen maanden, maar je bent weer thuis"
                 "Goede keuze! Jij bent de gene die vanavond iedereen veilig mee neemt naar een plek om te slapen vannacht, je hebt het heel erg naar je zin gehad vannacht en besluit bij deze groep te blijven.",
                 "Wie weet wat het je allemaal nog gaat brengen.",
-                "na het vliegen wil je gaan roadtrippen door italie, en gaan liften, je wacht bij het vliegveld waar je net geland bent,", ]
+                "na het vliegen wil je gaan roadtrippen door italie, en gaan liften, je wacht bij het vliegveld waar je net geland bent,"]
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-antwoordlijst = ["nul",
-                 "A, je red het wel, je staat er goed voor dus leren is niet nodig\nB, Voor de zekerheid ga je er toch nog voor het is je allerlaatste toets",
+antwoordlijst = ["nul",Fore.GREEN + "A, je red het wel, je staat er goed voor dus leren is niet nodig\nB, Voor de zekerheid ga je er toch nog voor het is je allerlaatste toets",
                  "A, Vliegen, dan ben je er sneller\nB, Rijden! muziek aan en genieten van de omgevingen waar je doorheen rijd!",
                  "A, Ach joh, liften is prima, misschien dat je nog leuke mensen leert kennen\nB, Doe dan maar het vliegtuig, ben je er sneller",
                  "A, Je rent het bos in, dan ben je hem zo snel mogelijk kwijt\nB, Je rent de straat door in de hoop andere mensen tegen te komen",
@@ -68,23 +73,34 @@ antwoordlijst = ["nul",
                  "A, Iets voelt niet goed, je stapt toch maar uit\nB, Er zal vast niks zijn, het is je eerste keer liften dus dat geeft misschien spanning, ik  blijf zitten",
                  "A, Natuurlijk ga je nog een weekendje los, je leeft maar een keer\nB, Nee het is goed zo, je gaat weer nieuwe mensen zoeken",
                  "A, Jaaa natuurlijk! met je favo band op het podium staan, wie wil dat nou niet\nB, Je bent te zenuwchtig en hebt je vrienden al een tijd niet gezien, hell no!",
-                 "A, Ja\nB, Nee"]
+                 "A, Ja\nB, Nee" + Fore.RESET]
+
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def slow_chat(text):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(.01)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 def printVerhaal(text):
-    print(verhaalLijst[text]+"\n")
+    slow_chat(Fore.CYAN + verhaalLijst[text] + Fore.RESET + "\n")
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 def printAntwoord(antwoord):
-    return (antwoordlijst[antwoord]+"\n")
+    return (Fore.GREEN + antwoordlijst[antwoord]+ Fore.RESET + "\n")
 
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-print("\n\n\n\n")
+
+print(len(verhaalLijst))
+
+print("\n\n")
+print(Fore.RED + "Voor de leukste werking van mijn geschreven programma, gebruik: Colorama (typ {pip install colorama} in de terminal om het te installeren" + Fore.RESET)
+print("\n\n")
 printVerhaal(1)
 printVerhaal(2)
 antwoord9 = input(printAntwoord(9))
@@ -92,7 +108,8 @@ antwoord9 = input(printAntwoord(9))
 if antwoord9 == "A":
     printVerhaal(3)
     time.sleep(2)
-    print(verhaalLijst[5] + "\n" + verhaalLijst[6])
+    printVerhaal(5)
+    printVerhaal(6)
     antwoord1 = input(printAntwoord(1))
 
 elif antwoord9 == "B":
@@ -108,30 +125,38 @@ if antwoord1 == "A":
     elif dice1 <= 35:
         printVerhaal(9)
         time.sleep(2)
-        print(verhaalLijst[12] + "\n" + verhaalLijst[10])
+        printVerhaal(12)
+        printVerhaal(10)
         antwoord2 = input(printAntwoord(2))
 
 elif antwoord1 == "B":
     printVerhaal(11)
     time.sleep(2)
-    print(verhaalLijst[12] + "\n" + verhaalLijst[10])
+    printVerhaal(12)
+    printVerhaal(10)
     antwoord2 = input(printAntwoord(2)) 
 # -------------------------------------
 if antwoord2 == "A":
-    print(verhaalLijst[13] + "\n" + verhaalLijst[15])
+    printVerhaal(13)
+    printVerhaal(15)
     time.sleep(1.5)
     printVerhaal(55)
     time.sleep(1)
     antwoord5 = input(printAntwoord(5))
 
 elif antwoord2 == "B":
-    print(verhaalLijst[13] + "\n" + verhaalLijst[15])
+    printVerhaal(13)
+    printVerhaal(15)
     time.sleep(1.5)
-    print(verhaalLijst[55] + "\n" + verhaalLijst[27])
+    printVerhaal(55)
+    printVerhaal(27)
     antwoord3 = input(printAntwoord(3))
 # -------------------------------------
 if antwoord3 == "A":
-    print(verhaalLijst[20] + "\n" + verhaalLijst[21] + "\n" + verhaalLijst[22] + "\n" + verhaalLijst[23])
+    printVerhaal(20)
+    printVerhaal(21)
+    printVerhaal(22)
+    printVerhaal(23)
     dice2 = (random.randint(1, 100))
     if dice2 > 50:
         print(verhaalLijst[24] + "\n" + verhaalLijst[25])
@@ -142,20 +167,26 @@ if antwoord3 == "A":
         antwoord5 = input(printAntwoord(5))
 
     elif dice2 <= 50:
-        print(verhaalLijst[35] + "\n" + verhaalLijst[36])
+        printVerhaal(35)
+        printVerhaal(36)
         antwoord4 = input(printAntwoord(4))
 
 elif antwoord3 == "B":
-    print(verhaalLijst[13] + "\n" + verhaalLijst[15])
+    printVerhaal(13)
+    printVerhaal(15)
     time.sleep(1.5)
-    print(verhaalLijst[55] + "\n" + verhaalLijst[27])
+    printVerhaal(55)
+    printVerhaal(27)
     antwoord5 = input(printAntwoord(5))
 # -------------------------------------
 if antwoord4 == "A":
-    print(verhaalLijst[37] + "\n" + verhaalLijst[38])
+    printVerhaal(37)
+    printVerhaal(38)
 
 elif antwoord4 == "B":
-    print(verhaalLijst[39] + "\n" + verhaalLijst[40] + "\n" + verhaalLijst[41])
+    printVerhaal(39)
+    printVerhaal(40)
+    printVerhaal(41)
     time.sleep(2)
     printVerhaal(42)
     time.sleep(1)
@@ -163,13 +194,15 @@ elif antwoord4 == "B":
     antwoord7 = input(printAntwoord(7)) 
 # -------------------------------------
 if antwoord5 == "A":
-    print(verhaalLijst[28] + "\n" + verhaalLijst[29 ])
+    printVerhaal(28)
+    printVerhaal(29)
     time.sleep(1.5)
     printVerhaal(30)
     antwoord7 = input(printAntwoord(7))
 
 elif antwoord5 == "B":
-    print(verhaalLijst[46] + "\n" + verhaalLijst[47])
+    printVerhaal(46)
+    printVerhaal(47)
     antwoord6 = input(printAntwoord(6))
 # -------------------------------------
 if antwoord6 == "A":
@@ -179,14 +212,22 @@ elif antwoord6 == "B":
     printVerhaal(48)
 # -------------------------------------
 if antwoord7 == "A":
-    print(verhaalLijst[43] + "\n" + verhaalLijst[44] + "\n" + verhaalLijst[45])
+    printVerhaal(43)
+    printVerhaal(44)
+    printVerhaal(45)
     antwoord8 = input(printAntwoord(8))
 
 elif antwoord7 == "B":
-    print(verhaalLijst[31] + "\n" + verhaalLijst[32] + "\n" + verhaalLijst[33] + "\n" + verhaalLijst[34])
+    printVerhaal(31)
+    printVerhaal(32)
+    printVerhaal(33)
+    printVerhaal(34)
 # -------------------------------------
 if antwoord8 == "A":
-    print(verhaalLijst[50] + "\n" + verhaalLijst[51] + "\n" + verhaalLijst[52])
+    printVerhaal(50)
+    printVerhaal(51)
+    printVerhaal(52)
 
 elif antwoord8 == "B":
-    print(verhaalLijst[53] + "\n" + verhaalLijst[54])    
+    printVerhaal(53)
+    printVerhaal(54)
