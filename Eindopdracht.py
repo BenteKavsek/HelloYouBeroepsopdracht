@@ -79,23 +79,27 @@ antwoordlijst = ["nul", Fore.GREEN + "A, je red het wel, je staat er goed voor d
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 def slow_chat(text):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(.03)
+        time.sleep(.015)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 def printVerhaal(text):
     slow_chat(Fore.CYAN + verhaalLijst[text] + Fore.RESET + "\n")
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 def printAntwoord(antwoord):
     return (Fore.GREEN + antwoordlijst[antwoord] + Fore.RESET + "\n")
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 print("\n\n")
 print("""██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
@@ -105,141 +109,136 @@ print("""██╗    ██╗███████╗██╗      ███�
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗██╗
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝""")
 print("\n")
-print(Fore.RED + "Voor de leukste werking van mijn geschreven programma, gebruik: Colorama en Pynput in de terminal om het te installeren.\nDruk op Enter om door te gaan." + Fore.RESET)
+q = input(Fore.RED + "Voor de leukste werking van mijn geschreven programma, gebruik: Colorama en Pynput in de terminal om het te installeren.\nDruk op Enter om door te gaan." + Fore.RESET)
 print("\n\n")
 
-def press_on(Enter):
-    printVerhaal(1)
-    printVerhaal(2)
-    antwoord9 = input(printAntwoord(9))
-    # -------------------------------------
-    if antwoord9 == "A":
-        printVerhaal(3)
-        time.sleep(2)
-        printVerhaal(5)
-        printVerhaal(6)
-        antwoord1 = input(printAntwoord(1))
 
-    elif antwoord9 == "B":
-        printVerhaal(4)
-    # -------------------------------------
-    if antwoord1 == "A":
-        printVerhaal(7)
-        dice1 = (random.randint(1, 100))
+printVerhaal(1)
+printVerhaal(2)
+antwoord9 = input(printAntwoord(9))
+# -------------------------------------
+if antwoord9 == "A":
+    printVerhaal(3)
+    time.sleep(2)
+    printVerhaal(5)
+    printVerhaal(6)
+    antwoord1 = input(printAntwoord(1))
 
-        if dice1 > 35:
-            printVerhaal(8)
+elif antwoord9 == "B":
+    printVerhaal(4)
+# -------------------------------------
+if antwoord1 == "A":
+    printVerhaal(7)
+    dice1 = (random.randint(1, 100))
 
-        elif dice1 <= 35:
-            printVerhaal(9)
-            time.sleep(2)
-            printVerhaal(12)
-            printVerhaal(10)
-            antwoord2 = input(printAntwoord(2))
+    if dice1 > 35:
+        printVerhaal(8)
 
-    elif antwoord1 == "B":
-        printVerhaal(11)
+    elif dice1 <= 35:
+        printVerhaal(9)
         time.sleep(2)
         printVerhaal(12)
         printVerhaal(10)
         antwoord2 = input(printAntwoord(2))
-    # -------------------------------------
-    if antwoord2 == "A":
-        printVerhaal(13)
-        printVerhaal(15)
-        time.sleep(1.5)
-        printVerhaal(55)
-        time.sleep(1)
-        antwoord5 = input(printAntwoord(5))
 
-    elif antwoord2 == "B":
-        printVerhaal(13)
-        printVerhaal(15)
-        time.sleep(1.5)
-        printVerhaal(55)
-        printVerhaal(27)
-        antwoord3 = input(printAntwoord(3))
+elif antwoord1 == "B":
+    printVerhaal(11)
+    time.sleep(2)
+    printVerhaal(12)
+    printVerhaal(10)
+    antwoord2 = input(printAntwoord(2))
+# -------------------------------------
+if antwoord2 == "A":
+    printVerhaal(13)
+    printVerhaal(15)
+    time.sleep(1.5)
+    printVerhaal(55)
+    time.sleep(1)
+    antwoord5 = input(printAntwoord(5))
+
+elif antwoord2 == "B":
+    printVerhaal(18)
+    printVerhaal(19)
+
+    antwoord3 = input(printAntwoord(3))
     # -------------------------------------
-    if antwoord3 == "A":
+if antwoord3 == "A":
         printVerhaal(20)
         printVerhaal(21)
         printVerhaal(22)
         printVerhaal(23)
         dice2 = (random.randint(1, 100))
-    if dice2 > 50:
-        print(verhaalLijst[24] + "\n" + verhaalLijst[25])
-        time.sleep(1.5)
-        printVerhaal(26)
-        time.sleep(1.5)
-        printVerhaal(27)
-        antwoord5 = input(printAntwoord(5))
 
-    elif dice2 <= 50:
-        printVerhaal(35)
-        printVerhaal(36)
-        antwoord4 = input(printAntwoord(4))
+        if dice2 > 50:
+            print(verhaalLijst[24] + "\n" + verhaalLijst[25])
+            time.sleep(1.5)
+            printVerhaal(26)
+            time.sleep(1.5)
+            printVerhaal(27)
+            antwoord5 = input(printAntwoord(5))
 
-    elif antwoord3 == "B":
-        printVerhaal(13)
-        printVerhaal(15)
-        time.sleep(1.5)
-        printVerhaal(55)
-        printVerhaal(27)
-        antwoord5 = input(printAntwoord(5))
-    # -------------------------------------
-    if antwoord4 == "A":
-        printVerhaal(37)
-        printVerhaal(38)
+        elif dice2 <= 50:
+            printVerhaal(35)
+            printVerhaal(36)
+            antwoord4 = input(printAntwoord(4))
 
-    elif antwoord4 == "B":
-        printVerhaal(39)
-        printVerhaal(40)
-        printVerhaal(41)
-        time.sleep(2)
-        printVerhaal(42)
-        time.sleep(1)
-        printVerhaal(30)
-        antwoord7 = input(printAntwoord(7))
-    # -------------------------------------
-    if antwoord5 == "A":
-        printVerhaal(28)
-        printVerhaal(29)
-        time.sleep(1.5)
-        printVerhaal(30)
-        antwoord7 = input(printAntwoord(7))
+elif antwoord3 == "B":
+    printVerhaal(13)
+    printVerhaal(15)
+    time.sleep(1.5)
+    printVerhaal(55)
+    printVerhaal(27)
+    antwoord5 = input(printAntwoord(5))
+# -------------------------------------
+if antwoord4 == "A":
+    printVerhaal(37)
+    printVerhaal(38)
 
-    elif antwoord5 == "B":
-        printVerhaal(46)
-        printVerhaal(47)
-        antwoord6 = input(printAntwoord(6))
-    # -------------------------------------
-    if antwoord6 == "A":
-        printVerhaal(49)
+elif antwoord4 == "B":
+    printVerhaal(39)
+    printVerhaal(40)
+    printVerhaal(41)
+    time.sleep(2)
+    printVerhaal(42)
+    time.sleep(1)
+    printVerhaal(30)
+    antwoord7 = input(printAntwoord(7))
+# -------------------------------------
+if antwoord5 == "A":
+    printVerhaal(28)
+    printVerhaal(29)
+    time.sleep(1.5)
+    printVerhaal(30)
+    antwoord7 = input(printAntwoord(7))
 
-    elif antwoord6 == "B":
-        printVerhaal(48)
-    # -------------------------------------
-    if antwoord7 == "A":
-        printVerhaal(43)
-        printVerhaal(44)
-        printVerhaal(45)
-        antwoord8 = input(printAntwoord(8))
+elif antwoord5 == "B":
+    printVerhaal(46)
+    printVerhaal(47)
+    antwoord6 = input(printAntwoord(6))
+# -------------------------------------
+if antwoord6 == "A":
+    printVerhaal(49)
 
-    elif antwoord7 == "B":
-        printVerhaal(31)
-        printVerhaal(32)
-        printVerhaal(33)
-        printVerhaal(34)
-    # -------------------------------------
-    if antwoord8 == "A":
-        printVerhaal(50)
-        printVerhaal(51)
-        printVerhaal(52)
+elif antwoord6 == "B":
+    printVerhaal(48)
+# -------------------------------------
+if antwoord7 == "A":
+    printVerhaal(43)
+    printVerhaal(44)
+    printVerhaal(45)
+    antwoord8 = input(printAntwoord(8))
 
-    elif antwoord8 == "B":
-        printVerhaal(53)
-        printVerhaal(54)
+elif antwoord7 == "B":
+    printVerhaal(31)
+    printVerhaal(32)
+    printVerhaal(33)
+    printVerhaal(34)
+# -------------------------------------
+if antwoord8 == "A":
+    printVerhaal(50)
+    printVerhaal(51)
+    printVerhaal(52)
 
-
-with Listener(on_press=press_on) as listener:
-    listener.join()
+elif antwoord8 == "B":
+    printVerhaal(53)
+    printVerhaal(54)
