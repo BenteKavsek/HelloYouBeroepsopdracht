@@ -14,7 +14,7 @@ verhaalLijst = ["NUL",
                 "Okee lekker zelfverzekerd, nu hopen dat het goedkomt!",
                 "Jammer, de toets weegt zwaarder mee dan je dacht, je bent niet geslaagd en moet het jaar over doen, je kan dus niet komend jaar naar het buitenland. Volgende keer beter!",
                 "Luckyyy! Je stond er al goed voor, het was dus niet zo erg dat je niet alles wist. je bent geslaagd en krijgt een uitnodiging binnen voor je diploma uitreiking,",
-                "eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten, je verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend! Ga je met het vliegtuig of rijden?",
+                "eenmaal daar zie je veel docenten weer en praat je bij met je klasgenoten, je verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend! Ga je met het vliegtuig of rijden?",
                 "Slim! Je slaagt en hebt je vakantie dubbel verdient!",
                 "Je krijgt een uitnodiging binnen voor je diploma uitreiking, eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten,\nje verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend!",
                 "Prima! Je vliegt overmorgen om 6:15 naar Palermo in Sicilië",
@@ -72,7 +72,6 @@ antwoordlijst = [Fore.GREEN +"nul", "A, je red het wel, je staat er goed voor du
                  "A, Ja\nB, Nee",  "A, Ja\nB, Nee" + Fore.RESET]
 
 #functions voor het uiterlijk van de code en het makkelijker maken
-
 def slow_chat(text):
     for char in text:
         sys.stdout.write(char)
@@ -89,10 +88,9 @@ def ongeldig():
     print("Dit was geen geldig antwoord, begin opnieuw")
 
 # functions per antwoord optie
-
 def intro1():
     print("\n\n")
-    print("""██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
+    print("""   ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
     ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝██║
     ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  ██║
     ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ╚═╝

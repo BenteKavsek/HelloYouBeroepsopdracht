@@ -3,7 +3,7 @@ import random
 import sys
 from colorama import Fore, init
 
-#lijsten met verhaal stukjes en antwoord opties
+# lijsten met verhaal stukjes en antwoord opties
 verhaalLijst = ["NUL",
                 "Welkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.",
                 "Hierin ben jij de hoofdpersoon, en kan je zelf keuzes maken om te zien hoe het verhaal verder gaat en uiteindelijk afloopt. wil je beginnen?",
@@ -61,7 +61,7 @@ verhaalLijst = ["NUL",
                 "Wie weet wat het je allemaal nog gaat brengen.",
                 "na het vliegen wil je gaan roadtrippen door italie, en gaan liften, je wacht bij het vliegveld waar je net geland bent,"]
 
-antwoordlijst = [Fore.GREEN +"nul", "A, je red het wel, je staat er goed voor dus leren is niet nodig\nB, Voor de zekerheid ga je er toch nog voor het is je allerlaatste toets",
+antwoordlijst = [Fore.GREEN + "nul", "A, je red het wel, je staat er goed voor dus leren is niet nodig\nB, Voor de zekerheid ga je er toch nog voor het is je allerlaatste toets",
                  "A, Vliegen, dan ben je er sneller\nB, Rijden! muziek aan en genieten van de omgevingen waar je doorheen rijd!",
                  "A, Ach joh, liften is prima, misschien dat je nog leuke mensen leert kennen\nB, Doe dan maar het vliegtuig, ben je er sneller",
                  "A, Je rent het bos in, dan ben je hem zo snel mogelijk kwijt\nB, Je rent de straat door in de hoop andere mensen tegen te komen",
@@ -71,7 +71,8 @@ antwoordlijst = [Fore.GREEN +"nul", "A, je red het wel, je staat er goed voor du
                  "A, Jaaa natuurlijk! met je favo band op het podium staan, wie wil dat nou niet\nB, Je bent te zenuwchtig en hebt je vrienden al een tijd niet gezien, hell no!",
                  "A, Ja\nB, Nee",  "A, Ja\nB, Nee" + Fore.RESET]
 
-#functions voor het uiterlijk van de code en het makkelijker maken
+# functions voor het uiterlijk van de code en het makkelijker maken
+
 
 def slow_chat(text):
     for char in text:
@@ -79,11 +80,14 @@ def slow_chat(text):
         sys.stdout.flush()
         time.sleep(.015)
 
+
 def printVerhaal(text):
     slow_chat(Fore.CYAN + verhaalLijst[text] + Fore.RESET + "\n")
 
+
 def printAntwoord(antwoord):
     return (Fore.GREEN + antwoordlijst[antwoord] + Fore.RESET + "\n")
+
 
 def ongeldig():
     print("Dit was geen geldig antwoord, probeer het opnieuw")
@@ -93,7 +97,7 @@ def ongeldig():
 
 def intro1():
     print("\n\n")
-    print("""██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
+    print("""    ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
     ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝██║
     ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  ██║
     ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ╚═╝
@@ -103,19 +107,22 @@ def intro1():
     q = input(Fore.RED + "Voor de leukste werking van mijn geschreven programma, gebruik: Colorama.\nDruk op Enter om door te gaan." + Fore.RESET)
     print("\n\n")
 
+
 def intro2():
     printVerhaal(1)
     printVerhaal(2)
-antwoord9 = input(printAntwoord(9))
 
-def a9 ():
+
+def a9():
     printVerhaal(3)
     time.sleep(2)
     printVerhaal(5)
     printVerhaal(6)
 
+
 def b9():
     printVerhaal(4)
+
 
 def a1():
     printVerhaal(7)
@@ -129,13 +136,14 @@ def a1():
         time.sleep(2)
         printVerhaal(12)
         printVerhaal(10)
-        antwoord2 = input(printAntwoord(2))
+
 
 def b1():
     printVerhaal(11)
     time.sleep(2)
     printVerhaal(12)
     printVerhaal(10)
+
 
 def a2():
     printVerhaal(13)
@@ -144,9 +152,11 @@ def a2():
     printVerhaal(55)
     time.sleep(1)
 
+
 def b2():
     printVerhaal(18)
     printVerhaal(19)
+
 
 def a3():
     printVerhaal(20)
@@ -154,8 +164,11 @@ def a3():
     printVerhaal(22)
     printVerhaal(23)
     dice2 = (random.randint(1, 100))
-    return dice2
+    return a3
+
+
 dice2 = a3
+
 
 def b3():
     printVerhaal(13)
@@ -164,20 +177,25 @@ def b3():
     printVerhaal(55)
     printVerhaal(27)
 
+
 def diceK50():
-    print(verhaalLijst[24] + "\n" + verhaalLijst[25])
+    printVerhaal(24)
+    printVerhaal(25)
     time.sleep(1.5)
     printVerhaal(26)
     time.sleep(1.5)
     printVerhaal(27)
 
+
 def diceG50():
     printVerhaal(35)
     printVerhaal(36)
 
+
 def a4():
     printVerhaal(37)
     printVerhaal(38)
+
 
 def b4():
     printVerhaal(39)
@@ -188,26 +206,32 @@ def b4():
     time.sleep(1)
     printVerhaal(30)
 
+
 def a5():
     printVerhaal(28)
     printVerhaal(29)
     time.sleep(1.5)
     printVerhaal(30)
 
+
 def b5():
     printVerhaal(46)
     printVerhaal(47)
 
+
 def a6():
     printVerhaal(49)
 
+
 def b6():
     printVerhaal(48)
+
 
 def a7():
     printVerhaal(43)
     printVerhaal(44)
     printVerhaal(45)
+
 
 def b7():
     printVerhaal(31)
@@ -215,118 +239,155 @@ def b7():
     printVerhaal(33)
     printVerhaal(34)
 
+
 def a8():
     printVerhaal(50)
     printVerhaal(51)
     printVerhaal(52)
 
+
 def b8():
     printVerhaal(53)
     printVerhaal(54)
 
-#code van antwoord naar vraag naar antwoord enz
+
+# code van antwoord naar vraag naar antwoord enz
 intro1()
 intro2()
 antwoord9 = input(printAntwoord(9))
 # -------------------------------------
-if antwoord9 == "A":
-    a9()
-    antwoord1 = input(printAntwoord(1))
+test9 = 1
+while test9 == 1:
+    if antwoord9 == "A":
+        a9()
+        antwoord1 = input(printAntwoord(1))
+        test9 = 0
 
-elif antwoord9 == "B":
-    b9()
-    antwoord1 = input(printAntwoord(1))
+    elif antwoord9 == "B":
+        b9()
+        test9 = 0
 
-else:
-    ongeldig()
-    antwoord9 = input(printAntwoord(9))
+    else:
+        ongeldig()
+        antwoord9 = input(printAntwoord(9))
 # -------------------------------------
-if antwoord1 == "A":
-    a1()
-    antwoord2 = input(printAntwoord(2))
+test1 = 1
+while test1 == 1:
+    if antwoord1 == "A":
+        a1()
+        antwoord2 = input(printAntwoord(2))
+        test1 = 0
 
-elif antwoord1 == "B":
-    b1()
-    antwoord2 = input(printAntwoord(2))
+    elif antwoord1 == "B":
+        b1()
+        antwoord2 = input(printAntwoord(2))
+        test1 = 0
 
-else:
-    ongeldig()
-    antwoord1 = input(printAntwoord(1))
-# ------------------------------------- 
-if antwoord2 == "A":
-    a2()
-    antwoord5 = input(printAntwoord(5))
-
-elif antwoord2 == "B":
-    b2()
-    antwoord3 = input(printAntwoord(3))
-
-else:
-    antwoord2 = input(printAntwoord(2))
+    else:
+        ongeldig()
+        antwoord1 = input(printAntwoord(1))
 # -------------------------------------
-if antwoord3 == "A":
-    a3()
+test2 = 1
+while test2 == 1:
+    if antwoord2 == "A":
+        a2()
+        antwoord5 = input(printAntwoord(5))
+        test2 = 0
 
-elif antwoord3 == "B":
-    b3()
-    antwoord5 = input(printAntwoord(5))
+    elif antwoord2 == "B":
+        b2()
+        antwoord3 = input(printAntwoord(3))
+        test2 = 0
 
-if dice2 > 50:
-    diceK50()
-    antwoord4 = input(printAntwoord(4))
-
-elif dice2 <= 50:
-    diceG50()
-    antwoord4 = input(printAntwoord(4))
-
-else:
-    antwoord3 = input(printAntwoord(3))
-# ------------------------------------- klopt tm hier
-if antwoord4 == "A":
-    a4()
-
-elif antwoord4 == "B":
-    b4()
-    antwoord7 = input(printAntwoord(7))
-
-else:
-    antwoord4 = input(printAntwoord(4))
+    else:
+        antwoord2 = input(printAntwoord(2))
 # -------------------------------------
-if antwoord5 == "A":
-    a5()
-    antwoord7 = input(printAntwoord(7))
+test3 = 1
+while test3 == 1:
+    if antwoord3 == "A":
+        a3()
 
-elif antwoord5 == "B":
-    b5()
-    antwoord6 = input(printAntwoord(6))
+    elif antwoord3 == "B":
+        b3()
+        antwoord5 = input(printAntwoord(5))
+        test3 = 0
 
-else:
-    antwoord5 = input(printAntwoord(5))
+    if antwoord3 == "A" and dice2 > 50:
+        diceK50()
+        antwoord5 = input(printAntwoord(5))
+        test3 = 0
+
+    if antwoord3 == "A" and dice2 <= 50:
+        diceG50()
+        antwoord4 = input(printAntwoord(5))
+        test3 = 0
+
+    else:
+        antwoord3 = input(printAntwoord(3))
 # -------------------------------------
-if antwoord6 == "A":
-    a6()
+test4 = 1
+while test4 == 1:
+    if antwoord4 == "A":
+        a4()
+        test4 = 0
 
-elif antwoord6 == "B":
-    b6()
+    elif antwoord4 == "B":
+        b4()
+        antwoord7 = input(printAntwoord(7))
+        test4 = 0
 
-else:
-    antwoord6 = input(printAntwoord(6))
+    else:
+        antwoord4 = input(printAntwoord(4))
 # -------------------------------------
-if antwoord7 == "A":
-    a7()
-    antwoord8 = input(printAntwoord(8))
+test5 = 1
+while test5 == 1:
+    if antwoord5 == "A":
+        a5()
+        antwoord7 = input(printAntwoord(7))
+        test5 = 0
 
-elif antwoord7 == "B":
-    b7()
+    elif antwoord5 == "B":
+        b5()
+        antwoord6 = input(printAntwoord(6))
+        test5 = 0
 
-else:
-    antwoord7 = input(printAntwoord(7))
+    else:
+        antwoord5 = input(printAntwoord(5))
 # -------------------------------------
-if antwoord8 == "A":
-    a8()
+test6 = 1
+while test6 == 1:
+    if antwoord6 == "A":
+        a6()
+        test6 = 0
 
-elif antwoord8 == "B":
-    b8()
+    elif antwoord6 == "B":
+        b6()
+        test6 = 0
 
-else:
-    antwoord8 = input(printAntwoord(8))
+    else:
+        antwoord6 = input(printAntwoord(6))
+# -------------------------------------
+test7 = 1
+while test7 == 1:
+    if antwoord7 == "A":
+        a7()
+        antwoord8 = input(printAntwoord(8))
+        test7 = 0
+
+    elif antwoord7 == "B":
+        b7()
+        test7 = 0
+
+    else:
+        antwoord7 = input(printAntwoord(7))
+# -------------------------------------
+test8 = 1
+while test8 == 1:
+    if antwoord8 == "A":
+        a8()
+
+    elif antwoord8 == "B":
+        b8()
+
+    else:
+        antwoord8 = input(printAntwoord(8))

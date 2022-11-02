@@ -69,7 +69,7 @@ antwoordlijst = [Fore.GREEN +"nul", "A, je red het wel, je staat er goed voor du
                  "A, Iets voelt niet goed, je stapt toch maar uit\nB, Er zal vast niks zijn, het is je eerste keer liften dus dat geeft misschien spanning, ik  blijf zitten",
                  "A, Natuurlijk ga je nog een weekendje los, je leeft maar een keer\nB, Nee het is goed zo, je gaat weer nieuwe mensen zoeken",
                  "A, Jaaa natuurlijk! met je favo band op het podium staan, wie wil dat nou niet\nB, Je bent te zenuwchtig en hebt je vrienden al een tijd niet gezien, hell no!",
-                 "A, Ja\nB, Nee",  "A, Ja\nB, Nee" + Fore.RESET]
+                 "A, Ja\nB, Nee", + Fore.RESET]
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def slow_chat(text):
     for char in text:
