@@ -7,7 +7,8 @@ Door verschillende keuzes in het verhaal te maken zullen er verschillende verhaa
 
 Ik heb verschillende versies van de code,
 
-Eindopdracht.py         = mijn 2e versie, ik heb gebruik gemaakt van een list en 2 functions om het coderen makkelijker te maken
-eindopdrFunctions.py    = de 3e versie waarbij het verhaal in functies verdeeld is
-eindopdrFunctions2.py   = de definitieve versie waarbij je als je een fout antwoord geeft je terug gestuurd word.
+**DefinitiefEindopdracht.py   = Mijn definieve eindproject voor de textbased applicatie**
+Eindopdracht.py             = mijn 2e versie, ik heb gebruik gemaakt van een list en 2 functions om het coderen makkelijker te maken (loopt niet lekker)
+eindopdrFunctions.py        = de 3e versie waarbij het verhaal in lists verdeeld is en door functies word opgeroepen (loopt niet lekker)
+eindopdrFunctions2.py       = zelfde als eindopdrFunctions.py maar dan word je na een fout antwoord terug gestuurd (loopt niet lekker)
 
