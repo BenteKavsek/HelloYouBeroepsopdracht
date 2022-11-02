@@ -2,7 +2,6 @@ import time
 import random
 import sys
 from colorama import Fore, init
-from functions import *
 
 #lijsten met verhaal stukjes en antwoord opties
 verhaalLijst = ["NUL",
@@ -238,9 +237,8 @@ elif antwoord9 == "B":
     b9()
     antwoord1 = input(printAntwoord(1))
 
-if antwoord9 != "A" and antwoord9 != "B":
+else:
     ongeldig()
-    intro2()
     antwoord9 = input(printAntwoord(9))
 # -------------------------------------
 if antwoord1 == "A":
@@ -251,14 +249,8 @@ elif antwoord1 == "B":
     b1()
     antwoord2 = input(printAntwoord(2))
 
-if antwoord1 != "A" and antwoord1 != "B" and antwoord9 == "A":
+else:
     ongeldig()
-    a9()
-    antwoord1 = input(printAntwoord(1))
-
-if antwoord1 != "A" and antwoord1 != "B" and antwoord9 == "B":
-    ongeldig()
-    b9()
     antwoord1 = input(printAntwoord(1))
 # ------------------------------------- 
 if antwoord2 == "A":
@@ -269,14 +261,7 @@ elif antwoord2 == "B":
     b2()
     antwoord3 = input(printAntwoord(3))
 
-if antwoord2 != "A" and antwoord2 != "B" and antwoord1 == "A":
-    ongeldig()
-    a1()
-    antwoord2 = input(printAntwoord(2))
-
-if antwoord2 != "A" and antwoord2 != "B" and antwoord1 == "B":
-    ongeldig()
-    b1()
+else:
     antwoord2 = input(printAntwoord(2))
 # -------------------------------------
 if antwoord3 == "A":
@@ -288,20 +273,13 @@ elif antwoord3 == "B":
 
 if dice2 > 50:
     diceK50()
-    antwoord5 = input(printAntwoord(5))
+    antwoord4 = input(printAntwoord(4))
 
 elif dice2 <= 50:
     diceG50()
     antwoord4 = input(printAntwoord(4))
 
-if antwoord3 != "A" and antwoord3 != "B" and antwoord2 == "A":
-    ongeldig()
-    a2()
-    antwoord5 = input(printAntwoord(5))
-
-if antwoord3 != "A" and antwoord3 != "B" and antwoord2 == "B":
-    ongeldig()
-    b2()
+else:
     antwoord3 = input(printAntwoord(3))
 # ------------------------------------- klopt tm hier
 if antwoord4 == "A":
@@ -311,16 +289,8 @@ elif antwoord4 == "B":
     b4()
     antwoord7 = input(printAntwoord(7))
 
-if antwoord4 != "A" and antwoord4 != "B" and antwoord3 == "A":
-    ongeldig()
-    a3()
-    if dice2 > 50:
-        diceK50()
-        antwoord5 = input(printAntwoord(5))
-
-    elif dice2 <= 50:
-        diceG50()
-        antwoord4 = input(printAntwoord(4))
+else:
+    antwoord4 = input(printAntwoord(4))
 # -------------------------------------
 if antwoord5 == "A":
     a5()
@@ -330,10 +300,8 @@ elif antwoord5 == "B":
     b5()
     antwoord6 = input(printAntwoord(6))
 
-if antwoord5 != "A" and antwoord5 != "B" and antwoord4 == "B":
-    ongeldig()
-    b4()
-    antwoord7 = input(printAntwoord(7))
+else:
+    antwoord5 = input(printAntwoord(5))
 # -------------------------------------
 if antwoord6 == "A":
     a6()
@@ -341,14 +309,7 @@ if antwoord6 == "A":
 elif antwoord6 == "B":
     b6()
 
-if antwoord6 != "A" and antwoord6 != "B" and antwoord5 == "A":
-    ongeldig()
-    a5()
-    antwoord7 = input(printAntwoord(7))
-
-if antwoord6 != "A" and antwoord6 != "B" and antwoord5 == "B":
-    ongeldig()
-    b5()
+else:
     antwoord6 = input(printAntwoord(6))
 # -------------------------------------
 if antwoord7 == "A":
@@ -358,14 +319,7 @@ if antwoord7 == "A":
 elif antwoord7 == "B":
     b7()
 
-if antwoord7 != "A" and antwoord7 != "B" and antwoord6 == "A":
-    ongeldig()
-    a6()
-    antwoord7 = input(printAntwoord(7))
-
-if antwoord7 != "A" and antwoord7 != "B" and antwoord6 == "B":
-    ongeldig()
-    b6()
+else:
     antwoord7 = input(printAntwoord(7))
 # -------------------------------------
 if antwoord8 == "A":
@@ -374,7 +328,5 @@ if antwoord8 == "A":
 elif antwoord8 == "B":
     b8()
 
-if antwoord8 != "A" and antwoord8 != "B" and antwoord7 == "A":
-    ongeldig()
-    a7()
+else:
     antwoord8 = input(printAntwoord(8))

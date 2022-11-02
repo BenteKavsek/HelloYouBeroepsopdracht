@@ -2,7 +2,6 @@ import time
 import random
 import sys
 from colorama import Fore, init
-from functions import *
 
 #lijsten met verhaal stukjes en antwoord opties
 verhaalLijst = ["NUL",
