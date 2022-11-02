@@ -3,6 +3,15 @@ import random
 import sys
 from colorama import Fore, init
 
+antwoord1 = "leeg"
+antwoord2 = "leeg"
+antwoord3 = "leeg"
+antwoord4 = "leeg"
+antwoord5 = "leeg"
+antwoord6 = "leeg"
+antwoord7 = "leeg"
+antwoord8 = "leeg"
+
 # lijsten met verhaal stukjes en antwoord opties
 verhaalLijst = ["NUL",
                 "Welkom bij mijn eindopdracht van periode 1 Hello You, ik heb een textbased applicatie gemaakt die je een verhaal zal laten beleven.",
@@ -18,8 +27,8 @@ verhaalLijst = ["NUL",
                 "Slim! Je slaagt en hebt je vakantie dubbel verdient!",
                 "Je krijgt een uitnodiging binnen voor je diploma uitreiking, eenmaal daar die je veel docenten weer en praat je bij met je klasgenoten,\nje verteld ze over de reis naar het buitenland die je wilt gaan maken, spannend!",
                 "Prima! Je vliegt overmorgen om 6:15 naar Palermo in Sicilië",
-                "hier ben je al een keer met je schoonfamilie geweest en het was ongelofelijk mooi, je gaat vanavond afscheid nemen",
-                "ze willen wel graag op bezoek komen en helpen je alvast met inpakken, zo kan je rustig je vakantie in gaan.",
+                "Hier ben je al een keer met je schoonfamilie geweest en het was ongelofelijk mooi, je gaat vanavond afscheid nemen",
+                "ze willen wel graag op bezoek komen en helpen je alvast met inpakken, zo kan je rustig je vakantie in gaan.\nna de vlucht kom je aan op je bestemming, ",
                 "De volgende ochtend ga je met het OV naar Schiphol, je appt iedereen je vluchtnummer en gegevens en zoekt je gate om in te checken,",
                 "even later, nog voordat je bij security bent lijkt het alsof je iemand herkent, je kan alleen niet plaatsen wie het is of waarvan je hem kent, wat doe je?",
                 "Hahaha, in al je enthousiasme ben je vergeten dat je geen rijbewijs hebt",
@@ -31,7 +40,7 @@ verhaalLijst = ["NUL",
                 "Hij draait zich het blijkt Milos te zijn! Hij was onderweg op vakantie en je stapt in, jullie hebben veel bij te praten na al het liften wat je al gedaan hebt.",
                 "Na 2 jaar op het mediacollege heb je je eigen bedrijf je opgericht waar je veel over wilt vertellen.",
                 "Jullie zijn zoveel aan het praten dat jullie de afslag hebben gemist! Jullie rijden langs een rustig tankstation om wat te eten te halen,",
-                "Na een half uur gewacht te hebben en een stuk gelopen te hebben zie je twee auto’s staan bij een ander tankstation,",
+                "Na een half uur gewacht te hebben en een stukje gelopen te hebben zie je twee auto’s staan bij een ander tankstation, waar stap je in om je reis te vervolgen?",
                 "Gezellig! Ze zijn onderweg richting Italië, daar wilde je al graag heen, ze hebben met zn alle een bus gehuurd waar je de komende week in mee kan.",
                 "Jullie hebben het heel gezellig, nieuwe mensen leren kennen en nieuwe dingen proberen houd je van!",
                 "Na 2,5 week het leuk gehad met al deze mensen overweeg je om weer verder te liften, ga je dat ook doen? Er is vanavond een feetje op het stand,  wil je nog 1 weekend blijven?",
@@ -148,10 +157,10 @@ def b1():
 
 def a2():
     printVerhaal(13)
+    printVerhaal(14)
     printVerhaal(15)
-    time.sleep(1.5)
-    printVerhaal(55)
     time.sleep(1)
+    printVerhaal(27)
 
 
 def b2():
@@ -160,18 +169,17 @@ def b2():
 
 
 def a3():
+    printVerhaal(13)
+    printVerhaal(14)
+    printVerhaal(15)
+    time.sleep(1)
+    printVerhaal(27)
+
+def b3():
     printVerhaal(20)
     printVerhaal(21)
     printVerhaal(22)
     printVerhaal(23)
-
-
-def b3():
-    printVerhaal(13)
-    printVerhaal(14)
-    printVerhaal(15)
-    printVerhaal(55)
-    printVerhaal(27)
 
 
 def diceK50():
@@ -303,6 +311,7 @@ while test3 == 1:
     if antwoord3 == "A":
         a3()
         dice2 = input("noem een getal van 1 t/m 100")
+        test3 = 0
 
     elif antwoord3 == "B":
         b3()
