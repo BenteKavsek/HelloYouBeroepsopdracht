@@ -59,7 +59,8 @@ verhaalLijst = ["NUL",
                 "Wat heb je ongelofelijk genoten afgelopen maanden, maar je bent weer thuis"
                 "Goede keuze! Jij bent de gene die vanavond iedereen veilig mee neemt naar een plek om te slapen vannacht, je hebt het heel erg naar je zin gehad vannacht en besluit bij deze groep te blijven.",
                 "Wie weet wat het je allemaal nog gaat brengen.",
-                "na het vliegen wil je gaan roadtrippen door italie, en gaan liften, je wacht bij het vliegveld waar je net geland bent,"]
+                "na het vliegen wil je gaan roadtrippen door italie, en gaan liften, je wacht bij het vliegveld waar je net geland bent,",
+                "Hier ben je al een keer met je schoonfamilie geweest en het was ongelofelijk mooi, je gaat vanavond afscheid nemen" ]
 
 antwoordlijst = [Fore.GREEN + "nul", "A, je red het wel, je staat er goed voor dus leren is niet nodig\nB, Voor de zekerheid ga je er toch nog voor het is je allerlaatste toets",
                  "A, Vliegen, dan ben je er sneller\nB, Rijden! muziek aan en genieten van de omgevingen waar je doorheen rijd!",
@@ -163,17 +164,12 @@ def a3():
     printVerhaal(21)
     printVerhaal(22)
     printVerhaal(23)
-    dice2 = (random.randint(1, 100))
-    return a3
-
-
-dice2 = a3
 
 
 def b3():
     printVerhaal(13)
+    printVerhaal(14)
     printVerhaal(15)
-    time.sleep(1.5)
     printVerhaal(55)
     printVerhaal(27)
 
@@ -306,24 +302,30 @@ test3 = 1
 while test3 == 1:
     if antwoord3 == "A":
         a3()
+        dice2 = input("noem een getal van 1 t/m 100")
 
     elif antwoord3 == "B":
         b3()
         antwoord5 = input(printAntwoord(5))
         test3 = 0
 
-    if antwoord3 == "A" and dice2 > 50:
+    else:
+        antwoord3 = input(printAntwoord(3))
+# -------------------------------------
+testX = 1
+
+while testX == 1:
+
+    if dice2 > 50:
         diceK50()
         antwoord5 = input(printAntwoord(5))
         test3 = 0
 
-    if antwoord3 == "A" and dice2 <= 50:
+    elif dice2 <= 50:
         diceG50()
         antwoord4 = input(printAntwoord(5))
         test3 = 0
 
-    else:
-        antwoord3 = input(printAntwoord(3))
 # -------------------------------------
 test4 = 1
 while test4 == 1:
